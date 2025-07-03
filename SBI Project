@@ -1,0 +1,128 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d89540dd-56bc-4970-a276-df0fd8f4a61b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "******************************************\n",
+      "                 SBI ATM                  \n",
+      "******************************************\n",
+      "1) Cash Withdraw        3) Check Balance\n",
+      "2) Cash Deposit         4) Change Pin\n",
+      "                5) Exit                 \n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter Your Choice 1\n",
+      "Enter Your Pin= 45343\n",
+      "Re-Enter Your Pin= 5656\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "wrong pin\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter Your Choice 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"******************************************\")\n",
+    "print(\"                 SBI ATM                  \")\n",
+    "print(\"******************************************\")\n",
+    "print(\"1) Cash Withdraw        3) Check Balance\")\n",
+    "print(\"2) Cash Deposit         4) Change Pin\")\n",
+    "print(\"                5) Exit                 \")\n",
+    "bal=50000\n",
+    "acc_no=12345678\n",
+    "k = 1\n",
+    "atm=1234\n",
+    "while k < 5:\n",
+    "    ch = int(input(\"Enter Your Choice\"))\n",
+    "    if ch == 1:\n",
+    "        p = int(input(\"Enter Your Pin=\"))\n",
+    "        q = int(input(\"Re-Enter Your Pin=\"))\n",
+    "\n",
+    "        if p == q and p == atm:\n",
+    "            w = int(input(\"Enter Withdrawl Amount=\"))\n",
+    "            if w <= bal:\n",
+    "                print(\"Success\")\n",
+    "            else:\n",
+    "                print(\"Insufficient Balance\")\n",
+    "        else:\n",
+    "            print(\"wrong pin\")\n",
+    "    elif ch==2:\n",
+    "        ac=int(input(\"Enter Account Number=\"))\n",
+    "        if ac==acc_no:\n",
+    "            m=int(input(\"Enter Deposit Amount=\"))\n",
+    "            print(\"Success!!\")\n",
+    "        else:\n",
+    "            print(\"Account Doesn't Exist, Please Try Again!\")\n",
+    "    elif ch==3:\n",
+    "        v=int(input(\"Enter Your Pin=\"))\n",
+    "        x=int(input(\"Re-enter Your Pin=\"))\n",
+    "        if v==x and v==atm:\n",
+    "            print(\"Your Current Balance is\",bal+m-w)\n",
+    "        else:\n",
+    "            print(\"Wrong Pin Entered, Please Try Again\")\n",
+    "    elif ch==4:\n",
+    "        n=int(input(\"Enter Old Pin=\"))\n",
+    "        if n==atm:\n",
+    "            ni=int(input(\"Enter New Pin=\"))\n",
+    "            na=int(input(\"Renter New Pin=\"))\n",
+    "            if ni==na:\n",
+    "                atm=ni\n",
+    "                print(\"Pin Changed Successfully\")\n",
+    "            else:\n",
+    "                print(\"Both Pin Don't Match\")\n",
+    "        else:\n",
+    "            print(\"Wrong Pin Entered\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9891ef3b-e8f9-4fae-9bf7-f4c4dbef9f79",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
